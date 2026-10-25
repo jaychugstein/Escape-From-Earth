@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 3,
+  "title": "Escape From Earth",
+  "description": "Glorb messed with the wrong dairy farmer. Fly his saucer left to right through one long course - farm, tunnel, town, highway, carnival, city, harbor, cave and Area 51 - and into the mothership. Touch anything and it's over.",
+  "author": "jaychugstein",
+  "version": "1.0.0",
+  "date": "2026-10-24",
+  "genre": "Action",
+  "license": "MIT",
+  "binaries": [
+    {
+      "title": "Escape From Earth",
+      "filename": "EscapeFromEarth.hex",
+      "device": "ArduboyFX",
+      "flashdata": "EscapeFromEarth-fxdata.bin",
+      "titleimage": "title.png"
+    }
+  ],
+  "sourceUrl": "https://github.com/jaychugstein/Escape-From-Earth"
+}
