@@ -419,6 +419,8 @@ void updatePlay() {
   } else if (fst >= F_CRASH) {
     bool press = ab.justPressed(A_BUTTON) || ab.justPressed(B_BUTTON);
     if (endT < 250) endT++;
+    bool home = ab.justPressed(A_BUTTON), ready = fst == F_CRASH ? endT > 80 : winStage == 2 && glT > 150;
+    if (ready && home) { st = S_TITLE; stT = 0; snd.noTone(); return; }   // inner button: back to the home screen
     if (fst == F_CRASH) { if (endT > 80 && press) newGame(); }
     else if (winStage == 0) { if (endT >= 150) { winStage = 1; glT = 0; snd.noTone(); } }
     else if (winStage == 1) { glT++; if (press && glT > 10) { if (glT < 380) glT = 380; else { winStage = 2; glT = 0; } } }
@@ -556,7 +558,10 @@ void drawHud() {
         at(110, 27); pc(flyT < 70 * 60 ? 'G' : flyT < 100 * 60 ? 'S' : 'B');
       }
     }
-    if ((fst == F_CRASH ? endT > 80 : glT > 150) && (playT & 32)) tinyS(36, 57, PSTR("PRESS TO RETRY"));
+    if (fst == F_CRASH ? endT > 80 : glT > 150) {                          // left button goes home, right button tries again
+      ab.fillCircle(17, 59, 2, WHITE); tinyS(22, 57, PSTR("HOME"));
+      ab.fillCircle(87, 59, 2, WHITE); tinyS(92, 57, PSTR("RETRY"));
+    }
   }
 }
 
