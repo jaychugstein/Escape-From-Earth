@@ -9,8 +9,10 @@ through one long course and into the waiting mothership. Touch anything and it's
 
 By **jaychugstein** · MIT License · Requires the FX flash chip.
 
-![](images/screenshot1.png) ![](images/screenshot3.png)
-![](images/screenshot4.png) ![](images/screenshot7.png)
+<img src="images/intro.png" width="49%"> <img src="images/screenshot1.png" width="49%">
+<img src="images/screenshot2.png" width="49%"> <img src="images/screenshot3.png" width="49%">
+<img src="images/screenshot4.png" width="49%"> <img src="images/screenshot6.png" width="49%">
+<img src="images/screenshot7.png" width="49%"> <img src="images/ending.png" width="49%">
 
 ## The course
 

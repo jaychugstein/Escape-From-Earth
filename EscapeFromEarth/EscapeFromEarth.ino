@@ -358,9 +358,12 @@ void drawFireworks() {
     } else {                                                                 // burst: a ring of sparks spreading and drooping
       uint8_t t = f.t - 30;
       if (t > 40 && (t & 1)) continue;                                       // flicker out at the end
-      for (uint8_t k = 0; k < 12; k++) {
-        float a = k * 0.5236f, r = t * 0.45f; if (r > 14) r = 14;
-        ab.drawPixel(x + cos(a) * r, f.top + sin(a) * r + t * t / 220, WHITE);
+      for (uint8_t k = 0; k < 16; k++) {                                     // outer ring of 16 sparks, inner ring at half size
+        float a = k * 0.3927f, r = t * 0.45f; if (r > 14) r = 14;
+        if (k & 1) r *= 0.55f;
+        float dx = cos(a) * r, dy = sin(a) * r + t * t / 220;
+        ab.drawPixel(x + dx, f.top + dy, WHITE);
+        if (t < 24 && !(k & 1)) ab.drawPixel(x + dx * 0.8f, f.top + dy * 0.8f, WHITE);   // short streak while it opens
       }
     }
   }
