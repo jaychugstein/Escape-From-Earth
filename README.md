@@ -44,7 +44,6 @@ The saucer flies like Pocket Rocket: point it where you want to go and propel.
 | Quick escape | 60 a second under 5 minutes |
 | Saving propel | 100 for every % of the run you didn't propel |
 
-Escape fast enough for a medal: gold under 70 seconds, silver under 100, bronze under 150.
 
 ## Install
 
