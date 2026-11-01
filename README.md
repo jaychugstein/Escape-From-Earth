@@ -7,7 +7,7 @@ https://jaychugstein.github.io/Escape-From-Earth/
 
 > "I messed with the wrong dairy farmer! We gotta get back to the mothership!" – Glorb
 
-A 1-bit saucer flying game for the **Arduboy FX** (and FX-C, POOM). Fly Glorb's saucer left to right
+A 1-bit saucer flying game for the **Arduboy FX** (and FX-C). Fly Glorb's saucer left to right
 through one long course and into the waiting mothership. Touch anything and it's over.
 
 By **jaychugstein** · MIT License · Requires the FX flash chip.
