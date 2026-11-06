@@ -1,6 +1,6 @@
-// ESCAPE FROM EARTH - by jaychugstein. Arduboy FX / POOM.
+// ESCAPE FROM EARTH - by jaychugstein. Arduboy FX / FX-C.
 // Fly Glorb's saucer left to right through one long course and into the mothership. Touch anything and it's over.
-// Left/Right (or POOM tilt): turn the saucer   Outer button: booster (tap to hover)   Inner button: spin a quarter turn
+// Left/Right: turn the saucer   B (outer button): booster (tap to hover)   A (inner button): spin a quarter turn
 #include <Arduboy2.h>
 #include <ArduboyTones.h>
 #include <EEPROM.h>

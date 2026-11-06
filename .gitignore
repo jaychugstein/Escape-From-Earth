@@ -1,0 +1,10 @@
+build/
+art/__pycache__/
+art/*.npy
+art/*.png
+art/preview/
+art/level/level.bin
+art/level/level_img.png
+art/*.bin
+art/level/level_msk.png
+art/level/sections.txt

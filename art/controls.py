@@ -26,7 +26,7 @@ def tiny(x,y,s,v=1):
                 if b>>j&1: px(x+i,y+j,v)
         x+=4
     return x
-# board, modelled on the POOM: case frame, two USB-C ports, wide screen, big module, SD slot,
+# board: case frame, two USB-C ports, wide screen, big module, SD slot,
 # d-pad in a clear ring, two round buttons inside a pill outline, screws in the corners
 bx,by,bw,bh=28,9,72,48
 def rrect(x,y,w,h,r=2,v=1):
@@ -39,16 +39,7 @@ for (x,y) in [(bx+5,by+5),(bx+bw-6,by+5),(bx+5,by+bh-6),(bx+bw-6,by+bh-6)]: circ
 rrect(bx+8,by+3,8,5,1); rect(bx+10,by+5,4,1)                             # usb-c left
 rrect(bx+bw-16,by+3,8,5,1); rect(bx+bw-14,by+5,4,1)                      # usb-c right
 rrect(bx+22,by+4,28,15,2)                                                 # screen bezel
-LOGO=["      ##   ##      ",            # POOM logo: chunky letters, a bar over each O
-       "                    ",
-       "#### #### #### ##.##",
-       "## # ## # ## # #####",
-       "#### ## # ## # # # #",
-       "##   ## # ## # #   #",
-       "##   #### #### #   #"]
-for j,row in enumerate(LOGO):
-    for i,c in enumerate(row):
-        if c=='#': px(bx+26+i,by+8+j,1)
+for k,t in enumerate(('ESCAPE','EARTH')): tiny(bx+36-(sum(3 if c==' ' else len(TINY[c])+1 for c in t)-1)//2,by+6+k*6,t)   # the game's name on the little screen (no device logo)
 circ(bx+25,by+20,1); circ(bx+46,by+20,1)                                  # screen screws
 rect(bx+29,by+24,13,12)                                                   # main module
 for (x,y) in [(bx+31,by+26),(bx+31,by+28),(bx+34,by+26)]: px(x,y); px(x+1,y)
@@ -79,6 +70,7 @@ for t in [i/40 for i in range(41)]:
         inside = (dist<6.5 and 0<=along<=1) or ((x-ix)**2+(y-iy)**2)**0.5<6.5 or ((x-ox_)**2+(y-oy_)**2)**0.5<6.5
         if not inside: px(round(x),round(y))
 circ(ox_,oy_,4,fill=True); circ(ix,iy,4,fill=True)
+for (cx_,cy_,ch) in ((ox_,oy_,'B'),(ix,iy,'A')): tiny(cx_-1,cy_-2,ch,0)   # letters as on the Arduboy: outer B, inner A
 # labels + leader lines (each line runs straight from the control to the middle of its word)
 tiny((W-8*4)//2,1,"CONTROLS")
 TINY['-']=[4,4]

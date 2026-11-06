@@ -28,7 +28,7 @@ Get close to the mothership and its tractor beam pulls you in.
 
 | Button | Action |
 |---|---|
-| Left / Right (or tilt on POOM) | Tilt / steer the saucer |
+| Left / Right | Tilt / steer the saucer |
 | B – outer (right) button, hold | Propel. Tap it to hover |
 | A – inner (left) button | Spin a quarter turn anticlockwise |
 
@@ -53,7 +53,7 @@ Escape fast enough for a medal: gold under 70 seconds, silver under 100, bronze 
 
 ## Install
 
-**Arduboy FX / FX-C / POOM:** load `release/EscapeFromEarth.hex` together with
+**Arduboy FX / FX-C:** load `release/EscapeFromEarth.hex` together with
 `release/EscapeFromEarth-fxdata.bin`, or the packaged `release/EscapeFromEarth.arduboy`, with
 any FX-aware uploader (for example the Arduboy Cart Builder, or the Arduboy-Python-Utilities
 `uploader.py` + `fxdata-upload.py`).
